@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ListingDetailFragment">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/topAppBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="?attr/actionBarSize"
+                app:navigationIcon="@drawable/ic_chevron_left_24dp"
+                app:title="Details" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!-- Note: A RecyclerView can also be used -->
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="24dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textViewName"
+                            style="?attr/textAppearanceHeadlineLarge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ABC Apartment"
+                            android:textColor="@color/design_default_color_primary"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textViewAddress"
+                            style="?attr/textAppearanceLabelMedium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ABC Apartment, Universe 2 St. Golden Country Homes" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutCapacity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:background="@drawable/circle_bg"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/textViewCapacity"
+                                style="?attr/textAppearanceTitleLarge"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="5"
+                                android:textColor="@color/design_default_color_primary" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            style="?attr/textAppearanceLabelSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Capacity" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <com.google.android.material.divider.MaterialDivider
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="24dp"
+                    android:paddingTop="24dp"
+                    android:paddingBottom="150dp">
+
+                    <TextView
+                        android:id="@+id/textViewContactPerson"
+                        style="?attr/textAppearanceLabelMedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Contact Person"
+                        android:textAllCaps="true" />
+
+                    <Button
+                        android:id="@+id/buttonCall"
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:text="Call +639876543210"
+                        app:icon="@drawable/ic_add_call_24dp" />
+
+                    <TextView
+                        style="?attr/textAppearanceLabelMedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:text="Details"
+                        android:textAllCaps="true" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            style="?attr/textAppearanceBodyMedium"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/label_text_bg"
+                            android:paddingVertical="8dp"
+                            android:text="Bills included:"
+                            android:textAlignment="center"
+                            android:textColor="#E3E3E3" />
+
+                        <TextView
+                            android:id="@+id/textViewBillsIncluded"
+                            style="?attr/textAppearanceBodyMedium"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="Water, electricity"
+                            android:textColor="@color/design_default_color_primary" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp">
+
+                        <TextView
+                            style="?attr/textAppearanceBodyMedium"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/label_text_bg"
+                            android:paddingVertical="8dp"
+                            android:text="Curfew:"
+                            android:textAlignment="center"
+                            android:textColor="#E3E3E3" />
+
+                        <TextView
+                            android:id="@+id/textViewCurfew"
+                            style="?attr/textAppearanceBodyMedium"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:text="10:00 PM - 4:00 AM"
+                            android:textColor="@color/design_default_color_primary" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutApartment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp">
+
+                            <TextView
+                                style="?attr/textAppearanceBodyMedium"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/label_text_bg"
+                                android:paddingVertical="8dp"
+                                android:text="Bedrooms:"
+                                android:textAlignment="center"
+                                android:textColor="#E3E3E3" />
+
+                            <TextView
+                                android:id="@+id/textViewBedrooms"
+                                style="?attr/textAppearanceBodyMedium"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:text="2 bedroom/s"
+                                android:textColor="@color/design_default_color_primary" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp">
+
+                            <TextView
+                                style="?attr/textAppearanceBodyMedium"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/label_text_bg"
+                                android:paddingVertical="8dp"
+                                android:text="Bathrooms:"
+                                android:textAlignment="center"
+                                android:textColor="#E3E3E3" />
+
+                            <TextView
+                                android:id="@+id/textViewBathrooms"
+                                style="?attr/textAppearanceBodyMedium"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:text="1 bathroom/s"
+                                android:textColor="@color/design_default_color_primary" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/linearLayoutBedspace"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp">
+
+                            <TextView
+                                style="?attr/textAppearanceBodyMedium"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/label_text_bg"
+                                android:paddingVertical="8dp"
+                                android:text="Roommates:"
+                                android:textAlignment="center"
+                                android:textColor="#E3E3E3" />
+
+                            <TextView
+                                android:id="@+id/textViewRoommates"
+                                style="?attr/textAppearanceBodyMedium"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:text="1 roommate/s"
+                                android:textColor="@color/design_default_color_primary" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp">
+
+                            <TextView
+                                style="?attr/textAppearanceBodyMedium"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/label_text_bg"
+                                android:paddingVertical="8dp"
+                                android:text="Bathroom share count:"
+                                android:textAlignment="center"
+                                android:textColor="#E3E3E3" />
+
+                            <TextView
+                                android:id="@+id/textViewBathroomShareCount"
+                                style="?attr/textAppearanceBodyMedium"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:text="1"
+                                android:textColor="@color/design_default_color_primary" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="#ffffff"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/textViewPrice"
+                    style="?attr/textAppearanceHeadlineMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="₱2000.00"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="?attr/textAppearanceLabelMedium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="/ month"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewContract"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="1-year contract"
+                android:textAppearance="?attr/textAppearanceBodyMedium"
+                android:textColor="?android:attr/textColorSecondary" />
+
+        </LinearLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</FrameLayout>

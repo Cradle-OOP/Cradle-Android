@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:background="#00000000"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="?attr/actionBarSize"
+            app:title="Filters" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Note: A RecyclerView can also be used -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:padding="24dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="?attr/textAppearanceLabelMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type"
+                android:textAllCaps="true" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkBoxApartment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Apartment" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkBoxBedspace"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bedspace" />
+
+            <TextView
+                style="?attr/textAppearanceLabelMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Curfew"
+                android:textAllCaps="true" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkBoxWithCurfew"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="With curfew" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkBoxNoCurfew"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No curfew" />
+
+            <TextView
+                style="?attr/textAppearanceLabelMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Contract"
+                android:textAllCaps="true" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkBoxWithContract"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="With contract" />
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/checkBoxNoContract"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No contract" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:padding="24dp">
+
+        <Button
+            android:id="@+id/buttonSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save" />
+
+        <Button
+            android:id="@+id/buttonClear"
+            style="?attr/materialButtonOutlinedStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Clear" />
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

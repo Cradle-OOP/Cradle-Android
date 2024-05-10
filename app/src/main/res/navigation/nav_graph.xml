@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.oop.gch.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_listingDetailFragment"
+            app:destination="@id/listingDetailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_myPropertiesFragment"
+            app:destination="@id/myPropertiesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_pickAccountTypeFragment"
+            app:destination="@id/pickAccountTypeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listingDetailFragment"
+        android:name="com.oop.gch.ListingDetailFragment"
+        android:label="fragment_listing_detail"
+        tools:layout="@layout/fragment_listing_detail" >
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/myPropertiesFragment"
+        android:name="com.oop.gch.seller.MyPropertiesFragment"
+        android:label="fragment_my_properties"
+        tools:layout="@layout/fragment_my_properties" >
+        <action
+            android:id="@+id/action_myPropertiesFragment_to_listingEditFragment"
+            app:destination="@id/listingEditFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listingEditFragment"
+        android:name="com.oop.gch.seller.ListingAddEditFragment"
+        android:label="fragment_listing_edit"
+        tools:layout="@layout/fragment_listing_add_edit" >
+        <argument
+            android:name="isNew"
+            app:argType="boolean"
+            android:defaultValue="true" />
+        <argument
+            android:name="docId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/sellerSignInFragment"
+        android:name="com.oop.gch.auth.SellerSignInFragment"
+        android:label="fragment_seller_sign_in"
+        tools:layout="@layout/fragment_seller_sign_in" >
+        <action
+            android:id="@+id/action_sellerSignInFragment_to_sellerSignUpFragment"
+            app:destination="@id/sellerSignUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pickAccountTypeFragment"
+        android:name="com.oop.gch.auth.PickAccountTypeFragment"
+        android:label="fragment_pick_account_type"
+        tools:layout="@layout/fragment_pick_account_type" >
+        <action
+            android:id="@+id/action_pickAccountTypeFragment_to_buyerSignInFragment"
+            app:destination="@id/buyerSignInFragment" />
+        <action
+            android:id="@+id/action_pickAccountTypeFragment_to_sellerSignInFragment"
+            app:destination="@id/sellerSignInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/buyerSignInFragment"
+        android:name="com.oop.gch.auth.BuyerSignInFragment"
+        android:label="fragment_buyer_sign_in"
+        tools:layout="@layout/fragment_buyer_sign_in" >
+        <action
+            android:id="@+id/action_buyerSignInFragment_to_buyerSignUpFragment"
+            app:destination="@id/buyerSignUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/buyerSignUpFragment"
+        android:name="com.oop.gch.auth.BuyerSignUpFragment"
+        android:label="fragment_buyer_sign_up"
+        tools:layout="@layout/fragment_buyer_sign_up" />
+    <fragment
+        android:id="@+id/sellerSignUpFragment"
+        android:name="com.oop.gch.auth.SellerSignUpFragment"
+        android:label="fragment_seller_sign_up"
+        tools:layout="@layout/fragment_seller_sign_up" />
+</navigation>

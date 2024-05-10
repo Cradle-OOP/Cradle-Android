@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/homeItem"
+        android:icon="@drawable/ic_chevron_left_24dp"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/loginItem"
+        android:icon="@drawable/ic_login_24dp"
+        android:title="Login" />
+
+</menu>
