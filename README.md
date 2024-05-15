@@ -42,3 +42,10 @@ The `Fragment` object in Android is a great example of this concept. Cradle has 
 - Redesign UI (Dark mode)
 - Google Maps integration
 - Feedback/rate feature
+
+# OOP Group Members
+- Artillaga, John Daniel B.
+- Barrion, Christine Joy
+- Dimalibot, Dann Jupiter
+- Lamera, Christopher
+- Moreno, Ahron John
